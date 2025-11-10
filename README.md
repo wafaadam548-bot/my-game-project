@@ -30,7 +30,7 @@ Collect **hearts** and **jewels** to stay alive and uncover the truth behind the
 |--------|-----|
 | Move Left | ← or A |
 | Move Right | → or D |
-| Jump | Space |
+| Jump | Space or ⬆️|
 
 ---
 
