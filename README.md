@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # godot-wakatime
 
 Godot plugin for metrics, insights, and time tracking automatically generated from your Godot usage.
@@ -70,3 +71,43 @@ Some settings are available in the editor bottom panel as soon as the plugin is 
 Tested **Windows** and **Linux**.
 
 It has Mac OS support as well, but has not yet been tested.
+=======
+# 🎮 Missing Step
+
+**Missing Step** is a 2D adventure platformer game made with **Godot Engine**.  
+Your mission is to find your missing brother while collecting hearts and jewels to keep your energy alive.  
+But be careful — one wrong step could change everything.
+
+---
+
+## 🧩 Story
+
+Your brother has disappeared without a trace.  
+You set out on a mysterious journey to find him, exploring dangerous places filled with traps and secrets.  
+Collect **hearts** and **jewels** to stay alive and uncover the truth behind the **missing step**.
+
+---
+
+## 🎯 Features
+
+- 🌈 Colorful 2D pixel art style  
+- ❤️ Collectible hearts and jewels as energy sources  
+- 🎵 Background music and sound effects  
+- 🧠 Simple but challenging gameplay  
+- 🔍 A mysterious storyline about family and discovery  
+
+---
+
+## 🕹️ Controls
+
+| Action | Key |
+|--------|-----|
+| Move Left | ← or A |
+| Move Right | → or D |
+| Jump | Space or ⬆️|
+
+---
+
+## Auther 
+Wafa Adam
+>>>>>>> 4db3fd9edbbaa44d8636eba49722e4cf358da926
