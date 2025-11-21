@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://0uxu7ohywvre"]
+
+[ext_resource type="FontVariation" uid="uid://c1xclg37juwfp" path="res://gameove.tres" id="1_4nh4k"]
+[ext_resource type="Script" uid="uid://d4fu1aeuq47wa" path="res://Scrept/gameover.gd" id="1_tpdqf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c7yh7"]
+bg_color = Color(0.64904934, 0.7695886, 0.94749445, 1)
+border_width_left = 20
+border_width_top = 20
+border_width_right = 20
+border_width_bottom = 20
+border_color = Color(0, 0, 0, 1)
+
+[node name="Gameover" type="CanvasLayer"]
+script = ExtResource("1_tpdqf")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_c7yh7")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Rows" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="Titel" type="Label" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_4nh4k")
+theme_override_font_sizes/font_size = 100
+text = "Game over"
+horizontal_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="quit" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_4nh4k")
+theme_override_font_sizes/font_size = 60
+text = "     QUIT      "
+
+[node name="restart" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 60
+text = "Restart"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/quit" to="." method="_on_queck_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/restart" to="." method="_on_restart_pressed"]

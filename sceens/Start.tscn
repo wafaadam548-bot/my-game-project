@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://bkfkpkl8etty2"]
+
+[ext_resource type="Script" uid="uid://coc2df5iphjly" path="res://sceens/start.gd" id="1_vhgm5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_krr4t"]
+bg_color = Color(0.34527174, 0.52344435, 0.44943416, 0.77254903)
+border_width_left = 1
+border_width_top = 2
+border_width_right = 1
+border_width_bottom = 2
+border_color = Color(0.07284262, 0.07284265, 0.07284256, 1)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_vhgm5")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 46.999992
+offset_top = 37.0
+offset_right = 47.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.88472927, 0.89564747)
+theme_override_styles/panel = SubResource("StyleBoxFlat_krr4t")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Rows" type="VBoxContainer" parent="PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 90
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.044557855, 0.044557847, 0.044557847, 1)
+theme_override_font_sizes/font_size = 100
+text = "Hidden Steps"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/MarginContainer/Rows"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/Rows/CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="QUIT" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "       QUIT          "
+
+[node name="RESTERT" type="Button" parent="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 70
+text = "START"
+
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/QUIT" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="PanelContainer/MarginContainer/Rows/CenterContainer/VBoxContainer/RESTERT" to="." method="_on_restert_pressed"]

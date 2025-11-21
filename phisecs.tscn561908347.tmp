@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5bijqo3u1o2h"]
+
+[ext_resource type="Texture2D" uid="uid://bwtdo76rfadwb" path="res://phisecs/player.png" id="1_dbxxf"]
+[ext_resource type="Script" uid="uid://dmhld5y3y1rpf" path="res://phisical_Player.gd" id="2_f2vs4"]
+[ext_resource type="Script" uid="uid://brr1h50fviknx" path="res://player.gd" id="2_wqans"]
+
+[sub_resource type="TileSet" id="TileSet_78gq3"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dbxxf"]
+radius = 171.0
+height = 610.77795
+
+[node name="main" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-21.0]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_78gq3")
+format = 2
+script = ExtResource("2_f2vs4")
+
+[node name="player" type="CharacterBody2D" parent="TileMap"]
+position = Vector2(-346.00003, 232)
+scale = Vector2(0.47278836, 0.49764442)
+script = ExtResource("2_wqans")
+
+[node name="sprit" type="Sprite2D" parent="TileMap/player"]
+position = Vector2(-858.7352, 98.4639)
+scale = Vector2(2.1151114, 2.3293285)
+texture = ExtResource("1_dbxxf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="TileMap/player"]
+position = Vector2(-827.0084, 122.577484)
+scale = Vector2(1.9459039, 2.3293285)
+shape = SubResource("CapsuleShape2D_dbxxf")
+
+[node name="Camera2D" type="Camera2D" parent="."]

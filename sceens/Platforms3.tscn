@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://dti4jli7c6ciw"]
+
+[ext_resource type="Texture2D" uid="uid://dnrnpj5fdm1jc" path="res://assets/Tilemap/Screenshot 2025-11-04 6.48.05 PM.png" id="1_p4p2d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bqn1v"]
+size = Vector2(49, 14)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="Screenshot202511046_48_05Pm" type="Sprite2D" parent="."]
+position = Vector2(111, 97)
+texture = ExtResource("1_p4p2d")
+region_enabled = true
+region_rect = Rect2(31, 74, 51, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(110.5, 98)
+shape = SubResource("RectangleShape2D_bqn1v")
+one_way_collision = true

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5bijqo3u1o2h"]
+
+[ext_resource type="Texture2D" uid="uid://bwtdo76rfadwb" path="res://phisecs/player.png" id="1_dbxxf"]
+[ext_resource type="Script" uid="uid://dmhld5y3y1rpf" path="res://phisical_Player.gd" id="2_f2vs4"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dbxxf"]
+radius = 9.273709
+height = 118.02903
+
+[node name="phisecs" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [-21.0]
+
+[node name="PLayer" type="RigidBody2D" parent="."]
+
+[node name="Player" type="Sprite2D" parent="PLayer"]
+position = Vector2(180, 212.00002)
+scale = Vector2(0.37204728, 0.4005178)
+texture = ExtResource("1_dbxxf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PLayer/Player"]
+scale = Vector2(-9.90196, -5.5528846)
+shape = SubResource("CapsuleShape2D_dbxxf")
+script = ExtResource("2_f2vs4")

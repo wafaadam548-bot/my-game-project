@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://boi7v2y4mxlxm"]
+
+[ext_resource type="Script" uid="uid://dn8hl2kdeeun4" path="res://Scrept/Player.gd" id="1_27upa"]
+[ext_resource type="Texture2D" uid="uid://bicargxqrgpm4" path="res://assets/Tiles/Characters/tile_0000.png" id="1_im1as"]
+[ext_resource type="Texture2D" uid="uid://d37yq0ywphpqm" path="res://assets/Tiles/Characters/tile_0001.png" id="2_27upa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ij6vw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_im1as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_27upa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_im1as")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_27upa")
+}],
+"loop": true,
+"name": &"Player",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ij6vw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_27upa"]
+
+[node name="Player" type="CharacterBody2D"]
+z_index = 5
+collision_layer = 2
+script = ExtResource("1_27upa")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ij6vw")
+animation = &"Player"
+frame_progress = 0.2321304
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ij6vw")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 7)
+scale = Vector2(0.59999985, 0.64000034)
+shape = SubResource("CircleShape2D_27upa")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

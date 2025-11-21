@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dhapyh4ljnapj"]
+
+[ext_resource type="AudioStream" uid="uid://lo0o2uxm7feg" path="res://data/attack.wav" id="1_lru4x"]
+
+[node name="music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_lru4x")
+autoplay = true
