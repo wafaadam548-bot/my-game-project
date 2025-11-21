@@ -1,5 +1,3 @@
-
-=======
 # 🎮 Missing Step
 
 **Missing Step** is a 2D adventure platformer game made with **Godot Engine**.  
