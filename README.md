@@ -37,7 +37,7 @@ Collect **hearts** and **jewels** to stay alive and uncover the truth behind the
 
 You can play the game online or download it on itch.io:
 
-🔗 Itch.io Page: [(add your link here)](https://wafaadam548.itch.io/hidden-steps)
+🔗 Itch.io Page: [(https://wafaadam548.itch.io/hidden-steps)](https://wafaadam548.itch.io/hidden-steps)
 
 Play in browser (HTML5)
 
